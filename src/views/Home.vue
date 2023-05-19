@@ -145,7 +145,7 @@
                     </div>
                 </div>
             </el-header>
-            <el-main style="height: calc(100vh - 120px);">
+            <el-main style="height: calc(100vh - 120px); padding: 0px;">
                 <RouterView />
             </el-main>
             <el-footer>
@@ -163,7 +163,7 @@ import { Histogram, Handbag, ShoppingTrolley, Open, User, Notification, Fold, Ex
 import { useRouter } from 'vue-router'
 import { useUserStore } from '../stores/user'
 let isCollapse = ref(false);
-let activeIndex = ref("/home/user");
+let activeIndex = ref("");
 let currentTime = ref("");
 let timer = ref(null);
 let width = ref("200px");
@@ -236,7 +236,7 @@ onUnmounted(() => {
         top: 0;
         width: 100%;
         box-sizing: border-box;
-        z-index: 9999;
+        z-index: 999;
         background-color: #fff;
 
 

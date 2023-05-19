@@ -9,7 +9,13 @@ const router = createRouter({
       alias: "/home",
       name: 'home',
       component: Home,
+      redirect: "/home/default",
       children: [
+        {
+          path: 'default',
+          name: 'default',
+          component: () => import('../views/Default.vue')
+        },
         {
           path: 'user',
           name: 'user',
