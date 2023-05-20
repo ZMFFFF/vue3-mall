@@ -9,7 +9,13 @@
                     <img src="../assets/logo2.svg" alt="" class="logo2" />
                 </template>
             </div>
-            <el-menu :default-active="activeIndex" :collapse="isCollapse" :unique-opened="true" :router="true" class="h">
+            <el-menu
+                :default-active="route.path"
+                :collapse="isCollapse"
+                :unique-opened="true"
+                :router="true"
+                class="h"
+            >
                 <el-sub-menu index="1">
                     <template #title>
                         <el-icon>
@@ -140,17 +146,24 @@
                         <el-menu-item index="/home/order">订单列表</el-menu-item>
                     </el-menu> -->
                     <div>
-                        <span class="user-name">{{ userStore.user?.username }}</span>
-                        <el-button type="danger" :icon="SwitchButton" circle @click="logout()" />
+                        <span class="user-name">{{
+                            userStore.user?.username
+                        }}</span>
+                        <el-button
+                            type="danger"
+                            :icon="SwitchButton"
+                            circle
+                            @click="logout()"
+                        />
                     </div>
                 </div>
             </el-header>
-            <el-main style="height: calc(100vh - 120px); padding: 0px;">
+            <el-main style="height: calc(100vh - 120px); padding: 0px">
                 <RouterView />
             </el-main>
             <el-footer>
                 <div class="border-top pt20">
-                    版本所有©董书华 {{ currentTime }}
+                    版本所有©王龙 {{ currentTime }}
                 </div>
             </el-footer>
         </el-container>
@@ -158,10 +171,20 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue';
-import { Histogram, Handbag, ShoppingTrolley, Open, User, Notification, Fold, Expand, SwitchButton } from '@element-plus/icons-vue';
-import { useRouter } from 'vue-router'
-import { useUserStore } from '../stores/user'
+import { ref, onMounted, onUnmounted } from "vue";
+import {
+    Histogram,
+    Handbag,
+    ShoppingTrolley,
+    Open,
+    User,
+    Notification,
+    Fold,
+    Expand,
+    SwitchButton,
+} from "@element-plus/icons-vue";
+import { useRoute, useRouter } from "vue-router";
+import { useUserStore } from "../stores/user";
 let isCollapse = ref(false);
 let activeIndex = ref("");
 let currentTime = ref("");
@@ -169,6 +192,7 @@ let timer = ref(null);
 let width = ref("200px");
 
 let router = useRouter();
+let route = useRoute();
 let userStore = useUserStore();
 
 //#region 组件的方法
@@ -187,31 +211,29 @@ function formatDate(date) {
 
 function changeCurrentTime() {
     timer.value = setInterval(() => {
-        currentTime.value = formatDate(new Date())
-    }, 1000)
+        currentTime.value = formatDate(new Date());
+    }, 1000);
 }
 
 function toggleCollapse() {
-    isCollapse.value = !isCollapse.value
-    width.value = isCollapse.value ? "64px" : "200px"
+    isCollapse.value = !isCollapse.value;
+    width.value = isCollapse.value ? "64px" : "200px";
 }
 
 function logout() {
     userStore.removeUser();
-    router.push('/login');
+    router.push("/login");
 }
 //#endregion
 
 onMounted(() => {
     changeCurrentTime();
-})
+});
 
 onUnmounted(() => {
     timer.value = null;
     clearInterval(timer.value);
-})
-
-
+});
 </script>
 
 <style scoped lang="scss">
@@ -238,7 +260,6 @@ onUnmounted(() => {
         box-sizing: border-box;
         z-index: 999;
         background-color: #fff;
-
 
         img {
             width: 100px;

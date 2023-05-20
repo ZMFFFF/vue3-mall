@@ -269,6 +269,7 @@
   "resolved" "https://registry.npmmirror.com/delayed-stream/-/delayed-stream-1.0.0.tgz"
   "version" "1.0.0"
 
+<<<<<<< HEAD
 "echarts@^5.4.1", "echarts@^5.4.2":
   "integrity" "sha512-2W3vw3oI2tWJdyAz+b8DuWS0nfXtSDqlDmqgin/lfzbkB01cuMEN66KWBlmur3YMp5nEDEEt5s23pllnAzB4EA=="
   "resolved" "https://registry.npmmirror.com/echarts/-/echarts-5.4.2.tgz"
@@ -281,6 +282,20 @@
   "integrity" "sha512-SQr0J9z7N4z48WYk/l9NE2tizl8Q7j2OhqlpTc42k4pGncry3+rVX6dsmcsglFynn6vt3NzYxWJqmLFyDKQq+g=="
   "resolved" "https://registry.npmmirror.com/element-plus/-/element-plus-2.3.4.tgz"
   "version" "2.3.4"
+=======
+echarts@^5.4.2:
+  version "5.4.2"
+  resolved "https://registry.npmmirror.com/echarts/-/echarts-5.4.2.tgz#9f38781c9c6ae323e896956178f6956952c77a48"
+  integrity sha512-2W3vw3oI2tWJdyAz+b8DuWS0nfXtSDqlDmqgin/lfzbkB01cuMEN66KWBlmur3YMp5nEDEEt5s23pllnAzB4EA==
+  dependencies:
+    tslib "2.3.0"
+    zrender "5.4.3"
+
+element-plus@^2.3.4:
+  version "2.3.4"
+  resolved "https://registry.npmmirror.com/element-plus/-/element-plus-2.3.4.tgz#4319f6b0a1096cfac9c53b69da2fe23ac5aea63e"
+  integrity sha512-SQr0J9z7N4z48WYk/l9NE2tizl8Q7j2OhqlpTc42k4pGncry3+rVX6dsmcsglFynn6vt3NzYxWJqmLFyDKQq+g==
+>>>>>>> origin/master
   dependencies:
     "@ctrl/tinycolor" "^3.4.1"
     "@element-plus/icons-vue" "^2.0.6"
@@ -526,6 +541,7 @@
   dependencies:
     "is-number" "^7.0.0"
 
+<<<<<<< HEAD
 "tslib@2.3.0":
   "integrity" "sha512-N82ooyxVNm6h1riLCoyS9e3fuJ3AMG2zIZs2Gd1ATcSFjSA23Q0fzjjZeh0jbJvWVDZ0cJT8yaNNaaXHzueNjg=="
   "resolved" "https://registry.npmmirror.com/tslib/-/tslib-2.3.0.tgz"
@@ -535,6 +551,17 @@
   "integrity" "sha512-MTIFpbIm9v7Hh5b0wSBgkcWzSBz7SAa6K/cBTwS4kUiQJfQLFlZZRJRQgqunCVzhTPCk674tW+0Qaqh3Q00dBg=="
   "resolved" "https://registry.npmmirror.com/vite/-/vite-4.3.7.tgz"
   "version" "4.3.7"
+=======
+tslib@2.3.0:
+  version "2.3.0"
+  resolved "https://registry.npmmirror.com/tslib/-/tslib-2.3.0.tgz#803b8cdab3e12ba581a4ca41c8839bbb0dacb09e"
+  integrity sha512-N82ooyxVNm6h1riLCoyS9e3fuJ3AMG2zIZs2Gd1ATcSFjSA23Q0fzjjZeh0jbJvWVDZ0cJT8yaNNaaXHzueNjg==
+
+vite@^4.3.4:
+  version "4.3.7"
+  resolved "https://registry.npmmirror.com/vite/-/vite-4.3.7.tgz#04f98ab0f4689490545b2f6fa0515e95072bb298"
+  integrity sha512-MTIFpbIm9v7Hh5b0wSBgkcWzSBz7SAa6K/cBTwS4kUiQJfQLFlZZRJRQgqunCVzhTPCk674tW+0Qaqh3Q00dBg==
+>>>>>>> origin/master
   dependencies:
     "esbuild" "^0.17.5"
     "postcss" "^8.4.23"
@@ -588,6 +615,7 @@
   "resolved" "https://registry.npmmirror.com/vuex-persister/-/vuex-persister-1.0.0.tgz"
   "version" "1.0.0"
   dependencies:
+<<<<<<< HEAD
     "deepmerge" "^4.2.2"
 
 "zrender@5.4.3":
@@ -596,3 +624,13 @@
   "version" "5.4.3"
   dependencies:
     "tslib" "2.3.0"
+=======
+    deepmerge "^4.2.2"
+
+zrender@5.4.3:
+  version "5.4.3"
+  resolved "https://registry.npmmirror.com/zrender/-/zrender-5.4.3.tgz#41ffaf835f3a3210224abd9d6964b48ff01e79f5"
+  integrity sha512-DRUM4ZLnoaT0PBVvGBDO9oWIDBKFdAVieNWxWwK0niYzJCMwGchRk21/hsE+RKkIveH3XHCyvXcJDkgLVvfizQ==
+  dependencies:
+    tslib "2.3.0"
+>>>>>>> origin/master

@@ -1,4 +1,5 @@
 <template>
+<<<<<<< HEAD
     
     <v-chart class="chart" :option="option" autoresize />
 </template>
@@ -68,3 +69,9 @@ const option = ref({
     height: 100vh;
 }
 </style>
+=======
+    <div>图表</div>
+</template>
+<script setup>
+</script>
+>>>>>>> origin/master
