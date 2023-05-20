@@ -18,7 +18,9 @@
                                 ? 'primary'
                                 : scope.row.level == 1
                                 ? 'success'
-                                : 'danger'
+                                : scope.row.level == 2
+                                ? 'danger'
+                                : ''
                         "
                         plain
                         >{{ level_s(scope.row.level) }}</el-button
@@ -38,21 +40,19 @@ import { ArrowRight } from "@element-plus/icons-vue";
 let userStore = useUserStore();
 
 var tableData = ref([]);
-// var btn_type = ref("primary");
 
 onMounted(() => {
     let url = `/rights/list`;
     instance
         .get(url, { headers: { Authorization: userStore.user.token } })
         .then((res) => {
-            console.log(res);
-            console.log(res.data.data);
+            // console.log(res);
+            // console.log(res.data.data);
             tableData.value = res.data.data;
         });
 });
 
 var level_s = computed(() => (s) => {
-    console.log(s);
     var l = "一级";
     if (s == "1") {
         l = "二级";
