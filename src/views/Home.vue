@@ -10,7 +10,7 @@
                 </template>
             </div>
             <el-menu
-                :default-active="activeIndex"
+                :default-active="route.path"
                 :collapse="isCollapse"
                 :unique-opened="true"
                 :router="true"
@@ -183,7 +183,7 @@ import {
     Expand,
     SwitchButton,
 } from "@element-plus/icons-vue";
-import { useRouter } from "vue-router";
+import { useRoute, useRouter } from "vue-router";
 import { useUserStore } from "../stores/user";
 let isCollapse = ref(false);
 let activeIndex = ref("");
@@ -192,6 +192,7 @@ let timer = ref(null);
 let width = ref("200px");
 
 let router = useRouter();
+let route = useRoute();
 let userStore = useUserStore();
 
 //#region 组件的方法
