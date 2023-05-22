@@ -174,7 +174,7 @@ async function search() {
     });
     console.log(result);
     if (result.data.meta.status != "200")
-        return ElMessage.error(res.data.meta.msg);
+        return ElMessage.error(result.data.meta.msg);
 
     total.value = result.data.data.total;
     tableData.value = [...result.data.data.users];

@@ -5,7 +5,13 @@
             <el-breadcrumb-item>权限管理</el-breadcrumb-item>
             <el-breadcrumb-item>权限列表</el-breadcrumb-item>
         </el-breadcrumb>
-        <el-table :data="tableData" stripe style="width: 100%" :border="true">
+        <el-table
+            :data="tableData"
+            stripe
+            style="width: 100%"
+            :border="true"
+            size="large"
+        >
             <el-table-column type="index" width="50" label="#" />
             <el-table-column prop="authName" label="权限名称" width="500" />
             <el-table-column prop="path" label="路径" width="500" />
@@ -23,6 +29,7 @@
                                 : ''
                         "
                         plain
+                        size="small"
                         >{{ level_s(scope.row.level) }}</el-button
                     >
                 </template>
