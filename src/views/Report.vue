@@ -1,5 +1,10 @@
 <template>
     <div class="report">
+        <el-breadcrumb :separator-icon="ArrowRight" style="margin: 20px 0">
+            <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
+            <el-breadcrumb-item>数据统计</el-breadcrumb-item>
+            <el-breadcrumb-item>数据报表</el-breadcrumb-item>
+        </el-breadcrumb>
         <div id="chart"></div>
     </div>
 </template>
@@ -9,6 +14,7 @@ import * as echarts from "echarts";
 import { onMounted, ref } from "vue";
 import instance from "../modules/request";
 import { useUserStore } from "../stores/user";
+import { ArrowRight } from "@element-plus/icons-vue";
 var userStore = useUserStore();
 var myChart1 = null;
 onMounted(() => {
@@ -30,8 +36,6 @@ onMounted(() => {
     width: 80vw;
     height: 500px;
     margin: 0 auto;
-    display: flex;
-    align-items: center;
     background-color: #fff;
 
     #chart {

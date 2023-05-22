@@ -1,5 +1,10 @@
 <template>
     <div class="role">
+        <el-breadcrumb :separator-icon="ArrowRight" style="margin: 0 0 20px 0">
+            <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
+            <el-breadcrumb-item>权限管理</el-breadcrumb-item>
+            <el-breadcrumb-item>角色列表</el-breadcrumb-item>
+        </el-breadcrumb>
         <div style="margin: 20px 0">
             <el-button
                 type="primary"
@@ -115,6 +120,7 @@ import instance from "../modules/request";
 import { useUserStore } from "../stores/user";
 import { computed, onMounted, ref, reactive } from "vue";
 import { ElMessage, ElMessageBox } from "element-plus";
+import { ArrowRight } from "@element-plus/icons-vue";
 
 let userStore = useUserStore();
 var tableData = ref([]);
